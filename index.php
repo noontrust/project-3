@@ -13,7 +13,7 @@
         <header>
             <div class="topBar">
                 <div class="logo">
-                <p id="wikiTitle">Wiki of Things</p>
+                <p id="wikiTitle">Wiki of Stuff</p>
                 </div>
                 <div id="filler"></div>
                 <div class="logOutArea">
@@ -25,7 +25,7 @@
         <div id="everythingButHeader">
             <div id="mainArea">
                 <div id="welcomeBox">
-                    <div id="welcomeTitle"><p>Welcome to the Wiki of Things</p></div>
+                    <div id="welcomeTitle"><p>Welcome to the Wiki of Stuff</p></div>
                     <!-- <hr> -->
                     <p>This wiki is about stuff and things, maybe even some whosits. I don't know.</p>
                     <p>You can edit articles by going to the article's page and clicking "Edit Article" at the top of the page.</p>
