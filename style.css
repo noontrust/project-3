@@ -1,0 +1,138 @@
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-image: url("./noise.png");
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+}
+.topBar {
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid aqua; */
+    flex-grow: 0;
+}
+.logo {
+    display: flex;
+    flex-basis: content;
+    /* border: 3px solid salmon; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    padding: 10px;
+}
+.logOutArea {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    /* border: 3px solid orange; */
+}
+#mainArea {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: darkgray;
+    flex-grow: 5;
+    margin-bottom: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    /* border: 3px solid green; */
+}
+ul li {
+    padding-top: 10px;
+}
+#seeAll {
+    text-align: right;
+    /* border: 1px solid rebeccapurple; */
+}
+#wikiTitle {
+    font-weight: bolder;
+    font-size: 25pt;
+    /* border: 1px solid orchid; */
+    color: #181818;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+.logoutButton {
+    text-align: right;
+}
+#everythingButHeader {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
+}
+#filler {
+    flex: auto;
+    /* border: 3px solid salmon; */
+}
+a + div {
+    display: none;
+}
+a:hover + div {
+    display: flex;
+    background-color: lightgray;
+    font-style: italic;
+    margin: 5px;
+}
+footer {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 0.5;
+    color: #181818;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid darkgray 3px;
+    border-top: 0px;
+}
+#welcomeTitle > p:first-child {
+    font-weight: bold;
+    font-size: 20pt;
+}
+#welcomeBox {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 5px solid darkgray;
+    padding: 10px;
+    border-radius: 15px;
+    flex-wrap: nowrap;
+}
+hr {
+    width: 100%;
+    border: 2px darkgray solid;
+}
+a {
+    font-weight: bold;
+}
+a:hover, a:active {
+    text-decoration: underline;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+#welcomeTitle {
+    display: flex;
+    background-color: darkgray;
+    flex: 100%;
+    justify-content: center;
+    border: inherit;
+    border-radius: inherit;
+}
