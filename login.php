@@ -1,7 +1,9 @@
 <html>
   <body>
+    <?php
     $db = mysqli_connect("localhost", "INFX371", "P*ssword", "wiki");
-    <form action="action_page.php" method="post">
+    ?>
+    <form action="login.php" method="post">
       <div class="container">
         <label for="username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
