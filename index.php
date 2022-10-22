@@ -1,4 +1,11 @@
-<?php include 'database.php'; ?>
+<?php include 'database.php';
+$query = "SELECT * FROM `article` WHERE article_id = '1'";
+$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$article = $result->fetch_assoc();
+
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,7 +42,7 @@
                 <ul>
                     <!-- for five or so most recent articles in db, print them here -->
                     <li>
-                        <a href="wiki.php?short_title=">The Science of Stuff</a><!-- Article 1--> 
+                        <a href="wiki.php?short_title="><?php echo $article ['article_title'] ?></a><!-- Article 1--> 
                         <div>Lorem ipsum blah blah blah</div><!-- Article 1 snippet -->
                     </li>
                     <li>
