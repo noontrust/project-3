@@ -34,7 +34,7 @@
   </div>
   <div>
     <h1>Home</h1>
-    <h4>Use the navigation bar to view wikis, or add you own below!</h4>
+    <h4>Use the navigation bar to view wikis, or add your own below!</h4>
     <hr>
     <?php
       if(isset($_GET["shortTitle"])){

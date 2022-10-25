@@ -42,8 +42,8 @@ $article = $result->fetch_assoc();
                 <ul>
                     <!-- for five or so most recent articles in db, print them here -->
                     <li>
-                        <a href="wiki.php?short_title="><?php echo $article ['article_title'] ?></a><!-- Article 1--> 
-                        <div>Lorem ipsum blah blah blah</div><!-- Article 1 snippet -->
+                        <a href="wiki.php?short_title=" title="test"><?php echo $article ['article_title'] ?></a><!-- Article 1--> 
+                        <div><?php echo substr($article ['article_body'], 0, 100) ?></div><!-- Article 1 snippet -->
                     </li>
                     <li>
                         <a href="wiki.php?short_title=">What Are Things?</a>
