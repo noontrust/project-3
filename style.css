@@ -83,7 +83,7 @@ ul li {
 #filler {
     flex: auto;
 }
-a + div {
+/* a + div {
     display: none;
 }
 a:hover + div {
@@ -91,7 +91,7 @@ a:hover + div {
     background-color: lightgray;
     font-style: italic;
     margin: 5px;
-}
+} */
 footer {
     background-color: transparent;
     display: flex;

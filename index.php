@@ -37,29 +37,25 @@ $article = $result->fetch_assoc();
                     <p>This wiki is about stuff and things, maybe even some whosits. I don't know.</p>
                     <p>You can edit articles by going to the article's page and clicking "Edit Article" at the top of the page.</p>
                     <p>You can also add articles to this wiki using <a href="./add.php">this</a> link.</p>
+                    <p><?php echo substr($article['article_body'], 0, 100) ?></p>
                 </div>
                 <h2>Recent Articles</h2>
                 <ul>
                     <!-- for five or so most recent articles in db, print them here -->
                     <li>
-                        <a href="wiki.php?short_title=" title="test"><?php echo $article ['article_title'] ?></a><!-- Article 1--> 
-                        <div><?php echo substr($article ['article_body'], 0, 100) ?></div><!-- Article 1 snippet -->
+                        <a href="wiki.php?short_title=" title="test"><?php echo $article ['article_title'] ?></a><!-- Article 1-->
                     </li>
                     <li>
                         <a href="wiki.php?short_title=">What Are Things?</a>
-                        <div>Lorem ipsum blah blah blah</div>
                     </li>
                     <li>
                         <a href="wiki.php?short_title=">The Origins of Whatchamacallits</a>
-                        <div>Lorem ipsum blah blah blah</div>
                     </li>
                     <li>
                         <a href="wiki.php?short_title=">Thingimajigs and Their Place in History</a>
-                        <div>Lorem ipsum blah blah blah</div>
                     </li>
                     <li>
                         <a href="wiki.php?short_title=">What In Tarnation Even is This Thing</a>
-                        <div>Lorem ipsum blah blah blah</div>
                     </li>
                 </ul>
                 <a  href="wiki.php">Show all articles...</a>
