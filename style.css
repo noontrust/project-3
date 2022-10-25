@@ -22,13 +22,11 @@ body {
 .topBar {
     display: flex;
     flex-direction: row;
-    /* border: 3px solid aqua; */
     flex-grow: 0;
 }
 .logo {
     display: flex;
     flex-basis: content;
-    /* border: 3px solid salmon; */
     flex-direction: column;
     flex-wrap: wrap;
     align-self: flex-start;
@@ -40,7 +38,6 @@ body {
     align-items: flex-end;
     justify-content: space-around;
     padding: 10px;
-    /* border: 3px solid orange; */
 }
 #mainArea {
     display: flex;
@@ -56,22 +53,17 @@ body {
     border-style: solid;
     border-color: darkgray;
     flex-grow: 5;
-    margin-bottom: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
 }
 .container {
     display: flex;
     flex: 1;
     flex-direction: row;
-    /* border: 3px solid green; */
 }
 ul li {
     padding-top: 10px;
 }
 #seeAll {
     text-align: right;
-    /* border: 1px solid rebeccapurple; */
 }
 #wikiTitle {
     font-weight: bolder;
@@ -90,7 +82,6 @@ ul li {
 }
 #filler {
     flex: auto;
-    /* border: 3px solid salmon; */
 }
 a + div {
     display: none;
@@ -108,12 +99,6 @@ footer {
     text-align: center;
     flex-grow: 0.5;
     color: #181818;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: solid darkgray 3px;
-    border-top: 0px;
 }
 #welcomeTitle > p:first-child {
     font-weight: bold;
@@ -141,6 +126,10 @@ a:hover, a:active {
 a:link, a:visited {
     text-decoration: none;
 }
+#loginButton{
+    align-self: flex-end;
+    display: flex;
+}
 #welcomeTitle {
     display: flex;
     background-color: darkgray;
@@ -148,4 +137,25 @@ a:link, a:visited {
     justify-content: center;
     border: inherit;
     border-radius: inherit;
+}
+.loginBox {
+    display: flex;
+    padding: 50pt;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: darkgray;
+}
+#registerButton {
+    display: flex;
+    align-self: flex-start;
+    font-weight: 100;
+}
+#logButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
