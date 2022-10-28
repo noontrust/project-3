@@ -50,7 +50,7 @@
       }
       else{
         echo "<h1>Home</h1>";
-        echo "<h4>Use the navigation bar to view wikis, or add you own below!</h4>";
+        echo "<h4>Use the navigation bar to view wikis, or add your own below!</h4>";
         echo "<form action='addArticle.php' method='post'>
           <input type='submit' value='Upload Article' name='articleSubmit'>
         </form>";
