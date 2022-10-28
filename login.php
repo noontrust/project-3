@@ -15,7 +15,7 @@
     <header>
       <div class="topBar">
           <div class="logo">
-          <p id="wikiTitle">Wiki of Things</p>
+          <p id="wikiTitle">Wiki of Pets</p>
           </div>
           <div id="filler"></div>
       </div>
