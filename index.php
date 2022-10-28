@@ -17,24 +17,13 @@ $article = $result->fetch_assoc();
         <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital@0;1&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="topBar">
-                <div class="logo">
-                <p id="wikiTitle">Wiki of Things</p>
-                </div>
-                <div id="filler"></div>
-                <div class="logOutArea">
-                    <a href="./login.php">Log Out</a>
-                    <p>You are logged in as User123<!-- php echo username here --></p>
-                </div>
-            </div>
-        </header>
+        <?php include "header.php" ?>
         <div id="everythingButHeader">
             <div id="mainArea">
                 <div id="welcomeBox">
-                    <div id="welcomeTitle"><p>Welcome to the Wiki of Things</p></div>
+                    <div id="welcomeTitle"><p>Welcome to the Wiki of Pets</p></div>
                     <!-- <hr> -->
-                    <p>This wiki is about stuff and things, maybe even some whosits. I don't know.</p>
+                    <p>This wiki is about pets.</p>
                     <p>You can edit articles by going to the article's page and clicking "Edit Article" at the top of the page.</p>
                     <p>You can also add articles to this wiki using <a href="./add.php">this</a> link.</p>
                     <p><?php echo substr($article['article_body'], 0, 100) ?></p>
@@ -61,9 +50,7 @@ $article = $result->fetch_assoc();
                 <a  href="wiki.php">Show all articles...</a>
                 </div>
             </div>
-            <footer>
-                <p>Copyright 2022 &copy</p>
-            </footer>
+            <?php include "footer.php" ?>
         </div>
     </body>
 </html>
