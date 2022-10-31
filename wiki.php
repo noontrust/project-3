@@ -44,12 +44,6 @@
             $article = $stmt->fetch_row();
             $title = $article[1];
             $info = $article[2];
-            //add link to addArticle here
-            /* echo "<h1>Home</h1>";
-            echo "<h4>Use the navigation bar to view wikis, or add your own below!</h4>";
-            echo "<form action='addArticle.php' method='post'>
-              <input type='submit' value='Upload Article' name='articleSubmit'>
-            </form>"; */
             ?>
             <div class="articletitle">
               <!-- print article title -->

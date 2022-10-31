@@ -32,19 +32,7 @@ $article = $result->fetch_assoc();
                 <ul>
                     <!-- for five or so most recent articles in db, print them here -->
                     <li>
-                        <a href="wiki.php?shortTitle=<?php echo $article ['article_short_title'] ?>" title="test"><?php echo $article ['article_title'] ?></a><!-- Article 1-->
-                    </li>
-                    <li>
-                        <a href="wiki.php?shortTitle=">What Are Things?</a>
-                    </li>
-                    <li>
-                        <a href="wiki.php?shortTitle=">The Origins of Whatchamacallits</a>
-                    </li>
-                    <li>
-                        <a href="wiki.php?shortTitle=">Thingimajigs and Their Place in History</a>
-                    </li>
-                    <li>
-                        <a href="wiki.php?shortTitle=">What In Tarnation Even is This Thing</a>
+                        <a href="wiki.php?shortTitle=<?php echo $article ['article_short_title'] ?>" ><?php echo $article ['article_title'] ?></a><!-- Article 1-->
                     </li>
                 </ul>
                 <a  href="wiki.php">Show all articles...</a>
