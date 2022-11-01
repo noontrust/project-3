@@ -5,7 +5,7 @@
         </div>
         <div id="filler"></div>
         <div class="logOutArea">
-            <a href="./login.php">Log Out</a>
+            <a href="./logOut.php">Log Out</a>
             <p>You are logged in as User123<!-- php echo username here --></p>
         </div>
     </div>
