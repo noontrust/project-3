@@ -1,20 +1,18 @@
 <?php
+  include "database.php";
+  
   $error;
-  $db = mysqli_connect("localhost", "INFX371", "P*ssword", "wiki");
-  if (!$db) {
-    echo "Connection failed";
-  } 
-
   if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $checkUsername = mysqli_query($db, "SELECT username from usr WHERE username = '$username'");
-    $hash = mysqli_fetch_assoc(mysqli_query($db, "SELECT password FROM `usr` WHERE username = '$username'"));
+    $checkUsername = mysqli_query($conn, "SELECT username from usr WHERE username = '$username'");
+    $hash = mysqli_fetch_assoc(mysqli_query($conn, "SELECT password FROM `usr` WHERE username = '$username'"));
 
     if ($checkUsername) {
       if (password_verify($password, $hash['password'])) {
         session_start();
-        $_SESSION["loggedin"] = true;
+        $_SESSION["isLoggedIn"] = true;
+        $_SESSION["username"] = $username;
         header("Location: index.php");
         exit();
       }
@@ -30,7 +28,7 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
+    <!-- <head>
         <meta charset="utf-8" />
         <title>Wiki</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
@@ -38,15 +36,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital@0;1&display=swap" rel="stylesheet">
     </head>
-  <body>
-    <header>
-      <div class="topBar">
-          <div class="logo">
-          <p id="wikiTitle">Wiki of Pets</p>
-          </div>
-          <div id="filler"></div>
-      </div>
-    </header>
+  <body> -->
+    <?php include "header.php";?>
+    
     <div class="loginBox">   
       <form action="login.php" method="post">
           <label for="username"><b>Username</b></label>
@@ -73,6 +65,6 @@
       </form>
     </div>
 
-    <footer>Copyright 2022 &copy</footer>
+    <?php include "footer.php";?>
   </body>
 </html>
