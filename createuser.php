@@ -1,21 +1,17 @@
 <?php
-  $error;
-  $db = mysqli_connect("localhost", "INFX371", "P*ssword", "wiki");
-  if (!$db) {
-    echo "Connection failed";
-  }
+  include "database.php";
   
   if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password-retype'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $passwordRetype = $_POST['password-retype'];
-    $checkUsername = mysqli_query($db, "SELECT username from usr WHERE username = '$username'");
+    $checkUsername = mysqli_query($conn, "SELECT username from usr WHERE username = '$username'");
     
     if (!$checkUsername) {
       if ($password == $passwordRetype) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO usr (username, password) VALUES ('$username', '$hashedPassword')";
-        $result = mysqli_query($db, $sql);
+        $result = mysqli_query($conn, $sql);
         header("Location: index.php");
         exit();
       }
