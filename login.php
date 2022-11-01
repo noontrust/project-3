@@ -1,22 +1,29 @@
 <?php
+  $error;
   $db = mysqli_connect("localhost", "INFX371", "P*ssword", "wiki");
   if (!$db) {
-    echo "Connection failed!";
+    echo "Connection failed";
   } 
 
   if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    $checkUsername = mysqli_query($db, "SELECT username from usr WHERE username = '$username'");
     $hash = mysqli_fetch_assoc(mysqli_query($db, "SELECT password FROM `usr` WHERE username = '$username'"));
 
-    if (password_verify($password, $hash['password'])) {
-      session_start();
-      header("Location: index.php");
-      exit();
+    if ($checkUsername) {
+      if (password_verify($password, $hash['password'])) {
+        session_start();
+        $_SESSION["loggedin"] = true;
+        header("Location: index.php");
+        exit();
+      }
+      else {
+        $error = "Incorrect Password.";
+      }
     }
     else {
-      echo "Incorrect Username or Password";
+      $error = "Username does not exist.";
     }
   }
 ?>
@@ -45,15 +52,27 @@
           <label for="username"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="username" required>
           <p></p>
+
           <label for="password"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="password" required>
           <p></p>
+
           <div id="logButtons">
-          <a id="registerButton" href="./createuser.php">Register new account</a>
-          <button id="loginButton" type="submit">Login</button>
+            <a id="registerButton" href="./createuser.php">Register new account</a>
+            <button id="loginButton" type="submit">Login</button>
+          </div>
+          <p></p>
+
+          <div class="error">
+            <?php 
+              if (isset($error)) {
+                echo $error;
+              }
+            ?>
           </div>
       </form>
     </div>
+
     <footer>Copyright 2022 &copy</footer>
   </body>
 </html>
