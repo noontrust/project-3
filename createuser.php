@@ -9,9 +9,9 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
     $passwordRetype = $_POST['password-retype'];
-    $checkUserID = mysqli_query($db, "SELECT username from usr WHERE username = '$username'");
+    $checkUsername = mysqli_query($db, "SELECT username from usr WHERE username = '$username'");
     
-    if (!$checkUserID) {
+    if (!$checkUsername) {
       if ($password == $passwordRetype) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO usr (username, password) VALUES ('$username', '$hashedPassword')";
@@ -51,6 +51,9 @@
         <div id="filler"></div>
       </div>
     </header>
+
+    <a href="./login.php">< Back</a>
+
     <div class="loginBox">   
       <form action="createuser.php" method="post">
         <label for="username"><b>Username</b></label>
