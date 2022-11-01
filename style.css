@@ -63,10 +63,13 @@ body {
     border-color: #1A1423;
     color: #1A1423;
     padding: 15px;
+    margin: 20;
 }
 .articleTitle {
     display: flex;
     justify-content: space-between;
+    margin: 20;
+    margin-bottom: 0;
 }
 .articleDivs {
     display: flex;
