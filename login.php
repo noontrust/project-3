@@ -14,6 +14,7 @@
     if ($checkUsername) {
       if (password_verify($password, $hash['password'])) {
         session_start();
+        $_SESSION["loggedin"] = true;
         header("Location: index.php");
         exit();
       }
