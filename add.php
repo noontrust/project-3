@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="main">
+    <div class="square">
       <form action="upload.php" method="post" enctype="multipart/form-data">
         <p>
           <label for="title">Title</label>

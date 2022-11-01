@@ -50,7 +50,7 @@
               <?php echo "<h1>" . $article[2] . "</h1>"; ?>
               <div class="addCreateLinks">
                 <a href="editArticle.php">Edit Article</a>
-                <a href="addArticle.php">Create New Article</a>
+                <a href="add.php">Create New Article</a>
               </div>
             </div>
             <div class="square">
