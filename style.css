@@ -24,6 +24,12 @@ body {
     flex-direction: row;
     flex-grow: 0;
 }
+.addCreateLinks {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column-reverse;
+    align-items: end;
+}
 .logo {
     display: flex;
     flex-basis: content;
@@ -38,6 +44,36 @@ body {
     align-items: flex-end;
     justify-content: space-around;
     padding: 10px;
+    /* border: 3px solid orange; */
+}
+.sideBar {
+    background-color: #1A1423;
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #1A1423;
+    display: flex;
+    flex-basis: 100%;
+    margin: 15px;
+}
+.square {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #1A1423;
+    color: #1A1423;
+    padding: 15px;
+    margin: 20;
+}
+.articleTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20;
+    margin-bottom: 0;
+}
+.articleDivs {
+    display: flex;
+    flex-direction: column;
 }
 #mainArea {
     display: flex;
@@ -83,7 +119,7 @@ ul li {
 #filler {
     flex: auto;
 }
-a + div {
+/* a + div {
     display: none;
 }
 a:hover + div {
@@ -91,7 +127,7 @@ a:hover + div {
     background-color: lightgray;
     font-style: italic;
     margin: 5px;
-}
+} */
 footer {
     background-color: transparent;
     display: flex;
@@ -158,4 +194,11 @@ a:link, a:visited {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.bigcontainer {
+    display: flex;
+    flex: 1;
+}
+img {
+    float: right;
 }

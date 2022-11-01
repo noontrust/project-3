@@ -17,57 +17,28 @@ $article = $result->fetch_assoc();
         <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital@0;1&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="topBar">
-                <div class="logo">
-                <p id="wikiTitle">Wiki of Things</p>
-                </div>
-                <div id="filler"></div>
-                <div class="logOutArea">
-                    <a href="./login.php">Log Out</a>
-                    <p>You are logged in as User123<!-- php echo username here --></p>
-                </div>
-            </div>
-        </header>
+        <?php include "header.php" ?>
         <div id="everythingButHeader">
             <div id="mainArea">
                 <div id="welcomeBox">
-                    <div id="welcomeTitle"><p>Welcome to the Wiki of Things</p></div>
+                    <div id="welcomeTitle"><p>Welcome to the Wiki of Pets</p></div>
                     <!-- <hr> -->
-                    <p>This wiki is about stuff and things, maybe even some whosits. I don't know.</p>
+                    <p>This wiki is about pets.</p>
                     <p>You can edit articles by going to the article's page and clicking "Edit Article" at the top of the page.</p>
                     <p>You can also add articles to this wiki using <a href="./add.php">this</a> link.</p>
+                    <p><?php echo substr($article['article_body'], 0, 100) ?></p>
                 </div>
                 <h2>Recent Articles</h2>
                 <ul>
                     <!-- for five or so most recent articles in db, print them here -->
                     <li>
-                        <a href="wiki.php?short_title="><?php echo $article ['article_title'] ?></a><!-- Article 1--> 
-                        <div>Lorem ipsum blah blah blah</div><!-- Article 1 snippet -->
-                    </li>
-                    <li>
-                        <a href="wiki.php?short_title=">What Are Things?</a>
-                        <div>Lorem ipsum blah blah blah</div>
-                    </li>
-                    <li>
-                        <a href="wiki.php?short_title=">The Origins of Whatchamacallits</a>
-                        <div>Lorem ipsum blah blah blah</div>
-                    </li>
-                    <li>
-                        <a href="wiki.php?short_title=">Thingimajigs and Their Place in History</a>
-                        <div>Lorem ipsum blah blah blah</div>
-                    </li>
-                    <li>
-                        <a href="wiki.php?short_title=">What In Tarnation Even is This Thing</a>
-                        <div>Lorem ipsum blah blah blah</div>
+                        <a href="wiki.php?shortTitle=<?php echo $article ['article_short_title'] ?>" ><?php echo $article ['article_title'] ?></a><!-- Article 1-->
                     </li>
                 </ul>
                 <a  href="wiki.php">Show all articles...</a>
                 </div>
             </div>
-            <footer>
-                <p>Copyright 2022 &copy</p>
-            </footer>
+            <?php include "footer.php" ?>
         </div>
     </body>
 </html>
