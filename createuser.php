@@ -5,9 +5,9 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
     $passwordRetype = $_POST['password-retype'];
-    $checkUsername = mysqli_query($conn, "SELECT username from usr WHERE username = '$username'");
+    $checkUsername = mysqli_fetch_assoc(mysqli_query($conn, "SELECT username from usr"));
     
-    if (!in_array($checkUsername)) {
+    if (!in_array($username, $checkUsername)) {
       if ($password == $passwordRetype) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO usr (username, password) VALUES ('$username', '$hashedPassword')";
