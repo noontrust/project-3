@@ -1,7 +1,7 @@
 <?php
 $HOST = "localhost";
-$USERNAME = "root";
-$PASSWORD = "";
+$USERNAME = "INFX371";
+$PASSWORD = "P*ssword";
 $DB_NAME = "wiki";
 $conn = new mysqli($HOST, $USERNAME, $PASSWORD, $DB_NAME);
 $stmt = $conn->query("SELECT * FROM article");
