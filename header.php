@@ -15,8 +15,9 @@
             <div id="filler"></div>
             <div class="logOutArea">
               <?php
+                session_start();
                 if($_SESSION["isLoggedIn"]){
-                  echo "<a href="./logOut.php">Log Out</a>";
+                  echo "<a href='./logOut.php'>Log Out</a>";
                   echo "<p>You are logged in as user</p>";
                 }
               ?>
