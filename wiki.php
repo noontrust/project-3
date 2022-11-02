@@ -1,18 +1,14 @@
   <?php
-  include "header.php";
+  
   include "database.php";
+  session_start();
   //if session not created redirect to login
   if(!isset($_SESSION["isLoggedIn"])){
     header("Location: login.php");
   }
   ?>
 <html lang="en">
-<head>
-  <title>Cool Facts Wiki</title>
-  <meta charset="utf-8">
-  <link href="style.css" type="text/css" rel="stylesheet">
-</head>
-<body>
+<?php include "header.php" ?>
   <div class="sideBar">
     <?php
     //place links to newest 5 wiki page

@@ -12,15 +12,6 @@ $article = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Wiki</title>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital@0;1&display=swap" rel="stylesheet">
-    </head>
-    <body>
         <?php include "header.php" ?>
         <div id="everythingButHeader">
             <div id="mainArea">

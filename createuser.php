@@ -1,5 +1,6 @@
 <?php
   include "database.php";
+  session_start();
   
   if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password-retype'])) {
     $username = $_POST['username'];

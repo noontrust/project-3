@@ -1,5 +1,6 @@
 <?php
   include "database.php";
+  session_start();
   
   $error;
   if (isset($_POST['username']) && isset($_POST['password'])) {
