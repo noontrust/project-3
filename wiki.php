@@ -1,6 +1,10 @@
   <?php
   include "header.php";
   include "database.php";
+  //if session not created redirect to login
+  if(!isset($_SESSION["isLoggedIn"])){
+    header("Location: login.php");
+  }
   ?>
 <html lang="en">
 <head>
