@@ -5,7 +5,7 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
     $passwordRetype = $_POST['password-retype'];
-    $checkUsername = mysqli_fetch_assoc(mysqli_query($conn, "SELECT username from usr"));
+    $checkUsername = mysqli_fetch_all(mysqli_query($conn, "SELECT username from usr"));
     
     if (!in_array($username, $checkUsername) || $checkUsername == NULL) {
       if ($password == $passwordRetype) {
