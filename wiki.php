@@ -8,6 +8,9 @@
 */
     include "header.php";
     session_start();
+    if(!$_SESSION["isLoggedIn"]){
+      header("Location: login.php");
+    }
     //query the articles
     $HOST = "localhost";
     $USERNAME = "root";

@@ -1,5 +1,9 @@
 <?php
   include "header.php";
+  session_start();
+  if(!$_SESSION["isLoggedIn"]){
+    header("Location: login.php");
+  }
  ?>
 <html lang="en">
   <head>

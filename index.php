@@ -1,6 +1,10 @@
 <?php include 'database.php';
+session_start();
+if(!$_SESSION["isLoggedIn"]){
+    header("Location: login.php");
+  }
 $query = "SELECT * FROM `article` WHERE article_id = '1'";
-$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$result = $conn->query($query) or die($conn->error.__LINE__);
 $article = $result->fetch_assoc();
 
 
