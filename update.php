@@ -2,7 +2,7 @@
   include "header.php";
   include "database.php";
   if(!$_SESSION["isLoggedIn"]){
-    header("Location: index.php");
+    header("Location: login.php");
   }
   $short_title = (isset($_POST["shortTitle"])) ? $_POST["shortTitle"] : $short_title= $_GET["shortTitle"];
   $articleQuery = "SELECT * FROM article WHERE article_short_title = '$short_title';";
