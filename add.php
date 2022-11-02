@@ -1,20 +1,12 @@
 <?php
-  include "header.php";
+
   session_start();
   if(!$_SESSION["isLoggedIn"]){
     header("Location: login.php");
   }
  ?>
-<html lang="en">
-  <head>
-    <title>Cool Pets Wiki</title>
-    <meta charset="utf-8">
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital@0;1&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<!DOCTYPE html lang="en">
+  <?php include "header.php"; ?>
     <div class="square">
       <form action="upload.php" method="post" enctype="multipart/form-data">
         <p>

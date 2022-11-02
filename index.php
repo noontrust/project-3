@@ -26,9 +26,13 @@ $article = $result->fetch_assoc();
                 <h2>Recent Articles</h2>
                 <ul>
                     <!-- for five or so most recent articles in db, print them here -->
-                    <li>
-                        <a href="wiki.php?shortTitle=<?php echo $article ['article_short_title'] ?>" ><?php echo $article ['article_title'] ?></a><!-- Article 1-->
-                    </li>
+                    
+                        <?php
+                            foreach ($topArticle as $row){
+                            echo "<li><a href=wiki.php?shortTitle=$row[1] title='$row[2]'>$row[2]</a></li>";
+                            }
+                        ?>
+                    
                 </ul>
                 <a  href="wiki.php">Show all articles...</a>
                 </div>
