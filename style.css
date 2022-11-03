@@ -47,8 +47,8 @@ body {
     /* border: 3px solid orange; */
 }
 .sideBar {
-    background-color: #1A1423;
-    text-align: center;
+    background-color: darkgray;
+    text-align: left;
     border-radius: 5px;
     border-style: solid;
     border-color: #1A1423;
@@ -59,7 +59,8 @@ body {
     flex-direction: column;
 }
 .sideBar > a {
-    color: salmon;
+    font-weight: normal;
+    color: #f2f2f2;
 }
 .square {
     background-color: #f2f2f2;
@@ -219,18 +220,31 @@ textarea {
     border-style: solid;
     border-color: darkgray;
     background-color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 15px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 .card-img-top {
     display: flex;
 }
 .col-lg-5 {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 h1 {
+    text-align: center;
+}
+.card-text {
+    font-weight: 800;
+    text-align: center;
+}
+.birthday {
+    text-align: center;
+}
+.btn-btn-primary {
     text-align: center;
 }

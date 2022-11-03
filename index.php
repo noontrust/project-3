@@ -34,7 +34,7 @@ $article = $result->fetch_assoc();
                         ?>
                     
                 </ul>
-                <a  href="wiki.php">Show all articles...</a>
+                <a  href="showall.php">Show all articles...</a>
                 </div>
             </div>
             <?php include "footer.php" ?>

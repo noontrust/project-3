@@ -12,12 +12,15 @@ if(!isset($_SESSION["isLoggedIn"])){
 <div class="bigcontainer">
 <div class="container">
 <div class="sideBar">
+  <ul>
   <?php
   //place links to newest 5 wiki page
    foreach ($topArticle as $row){
-    echo "<a href=wiki.php?shortTitle=$row[1] title='$row[2]'>$row[2]</a>";
+    echo "<li><a href=wiki.php?shortTitle=$row[1] title='$row[2]'>$row[2]</li></a>";
   }
   ?>
+  </ul>
+  <a  href="showall.php">Show all articles...</a>
 </div>
 <div class="articleDivs">
   <?php
@@ -40,7 +43,7 @@ if(!isset($_SESSION["isLoggedIn"])){
         <div class="square">
           <?php
             echo (isset($article[4]))? "<div><img src=".$article[4] ."></div>" : "";
-            echo (isset($article[5]))? "<p>Birthday: " .$article[5] ."</p>" : "";
+            echo (isset($article[5])) && !$article[5]=="0000-00-00"? "<p>Birthday: ".$article[5] ."</p>" : "";
           ?>
           <?php echo "<p>" . $article[3] . "</p>"; ?>
         </div>
