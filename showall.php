@@ -32,7 +32,8 @@
                         <div class="card-body">
                             <h5 class="card-title"> <?= $result['article_short_title'] ?> </h5>
                             <p class="card-text"> <?= $result['article_title'] ?> </p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <p class="birthday"> <?= $result['article_birthdate'] ?> </p>
+                            <a href="wiki.php" class="btn btn-primary">Read More</a>
                         </div>
 
                         <?php } } ?>
