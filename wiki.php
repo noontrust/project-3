@@ -38,8 +38,8 @@
             </div>
           </div>
           <div class="square">
-            <div><img src="./noise.png"></div>
-            <!-- print article body -->
+            <div><img src="<?php echo $article[4] ?>"></div>
+            <p>Birthday: <?php echo $article[5] ?></p>
             <?php echo "<p>" . $article[3] . "</p>"; ?>
           </div>
         </div>
