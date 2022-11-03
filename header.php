@@ -17,6 +17,7 @@
               <?php
                 if (isset($_SESSION["isLoggedIn"])){
                   echo "<a href='./logOut.php'>Log Out</a>";
+                  echo "<a href='./index.php'>Home</a>";
                   echo "<p>You are logged in as " . $_SESSION["username"] . "</p>";
                 }
               ?>

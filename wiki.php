@@ -33,14 +33,14 @@ if(!isset($_SESSION["isLoggedIn"])){
           <!-- print article title -->
           <?php echo "<h1>" . $article[2] . "</h1>"; ?>
           <div class="addCreateLinks">
-            <a href="editArticle.php">Edit Article</a>
+            <a href="update.php?shortTitle=<?=$article[1]?>">Edit Article</a>
             <a href="add.php">Create New Article</a>
           </div>
         </div>
         <div class="square">
           <?php
-            echo (isset($article[4])? "<div><img src=".$article[4] ."></div>" : "";
-            echo (isset($article[5])? "<p>Birthday: " .$article[5] ."</p>" : "";
+            echo (isset($article[4]))? "<div><img src=".$article[4] ."></div>" : "";
+            echo (isset($article[5]))? "<p>Birthday: " .$article[5] ."</p>" : "";
           ?>
           <?php echo "<p>" . $article[3] . "</p>"; ?>
         </div>

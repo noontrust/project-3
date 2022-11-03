@@ -1,5 +1,4 @@
 <?php
-  include "header.php";
   include "database.php";
   session_start();
   if(!$_SESSION["isLoggedIn"]){
@@ -37,14 +36,9 @@
     header("Location: wiki.php?shortTitle=".$short_title);//open the article
   }
  ?>
-<html lang="en">
-  <head>
-    <title>Cool Pets Wiki</title>
-    <meta charset="utf-8">
-    <link href="style.css" type="text/css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="main">
+<!DOCTYPE html lang="en">
+  <?php include 'header.php'; ?>
+    <div class="square">
       <form action="update.php?shortTitle="<?=$short_title?> method="post" enctype="multipart/form-data">
         <p>
           <label for="title">Title</label>

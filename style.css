@@ -211,3 +211,7 @@ img {
     height: 200px;
     object-fit: cover;
 }
+textarea {
+    height: 200px;
+    width: 500px;
+}
