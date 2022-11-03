@@ -5,8 +5,10 @@ if(isset($_POST["submit"])) {
   $query = "";
   //insert data into database
   $title = trim($_POST["title"]);
+  $title = mysqli_real_escape_string($conn, $title);
   $short_title = str_replace(' ', '', $title);
   $body = trim($_POST["body"]);
+  $body = mysqli_real_escape_string($conn, $body);
   $query .= "INSERT INTO `article` VALUES " . "(NULL, '$short_title', '$title', '$body'";
 
   //This adds the photo upload to the images folder and inserts url into db
