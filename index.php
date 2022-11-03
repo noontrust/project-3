@@ -21,7 +21,6 @@ $article = $result->fetch_assoc();
                     <p>This wiki is about pets.</p>
                     <p>You can edit articles by going to the article's page and clicking "Edit Article" at the top of the page.</p>
                     <p>You can also add articles to this wiki using <a href="./add.php">this</a> link.</p>
-                    <p><?php echo substr($article['article_body'], 0, 100) ?></p>
                 </div>
                 <h2>Recent Articles</h2>
                 <ul>
